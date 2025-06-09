@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link id="favicon" rel="shortcut icon" href="assets/img/Chartre%20graphique%20-%20Dossier%20PNG/Icônes/Icône%20bleu.png" type="image/x-icon">
+  <title>Site web la cordée coté clients</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<header id="site-header" class="text-white p-3 mb-4">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="index.html" id="logo-link" class="d-flex align-items-center">
+      <img id="main-logo"
+           src="assets/img/Chartre%20graphique%20-%20Dossier%20PNG/Logos/Logo%20bleu%20sur%20fond%20rose.png"
+           alt="Logo La Cordée" />
+    </a>
+
+    <nav>
+      <ul class="nav nav-menu align-items-center mb-0">
+        <li class="nav-item"><a href="index.html" class="nav-link text-white">Accueil</a></li>
+
+        <li class="nav-item dropdown hover-dropdown">
+          <a class="nav-link text-white" href="#">Activitées</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="activite.html?name=aquarelle">Aquarelle</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=art-du-fil">Art du fil</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=art-floral">Art floral</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=travaux-manuels">Travaux manuels</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=peinture-sur-soie">Peinture sur soie</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=yoga">Yoga</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=sophrologie">Sophrologie</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=randonnée">Randonnée</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=atelier-memoire">Atelier Mémoire</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=petanque">Pétanque</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=ludocordee">LudoCordée</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=mandala-sonore">Mandala Sonore</a></li>
+            <li><a class="dropdown-item" href="activite.html?name=fete-des-confitures">Fête des confitures</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a href="calendrier.html" class="nav-link text-white">Événements</a></li>
+
+        <li class="nav-item ms-3">
+          <select id="themeSelector" class="form-select form-select-sm">
+            <option value="bleu-rose">Bleu sur fond rose</option>
+            <option value="bleu-vert">Bleu sur fond vert</option>
+            <option value="jaune-bleu">Jaune sur fond bleu</option>
+            <option value="rose-bleu">Rose sur fond bleu</option>
+            <option value="vert-bleu">Vert sur fond bleu</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main-container mb-5">
+  <h1 class="mb-4">Bienvenue à La Cordée</h1>
+  <p class="lead">Depuis plus de 40 ans, notre association propose des activités socioculturelles variées pour toutes les générations, basées sur l'entraide, la solidarité et la transmission de savoirs.</p>
+
+  <!-- Cartes pour les 13 sections -->
+  <section class="row row-cols-1 row-cols-md-3 g-4 mt-4"></section>
+</main>
+
+<main class="main-container mb-5">
+  <h1 class="mb-4">Calendrier des événements</h1>
+  <section id="calendar-section">
+    <div class="p-4 bg-light border rounded shadow-sm mb-5">
+  <h2 class="h4 mb-4 text-center">Événements à venir</h2>
+
+  <!-- Mon carrousel -->
+  <div id="carouselEvenements" class="carousel slide">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="card text-center mx-auto" style="max-width: 500px;">
+          <div class="card-body">
+            <h5 class="card-title">Atelier Mandala Sonore</h5>
+            <p class="card-text">Rejoignez-nous pour un moment de détente et de créativité autour du son et des formes. <br><strong>Vendredi 14 juin – 14h à 16h</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card text-center mx-auto" style="max-width: 500px;">
+          <div class="card-body">
+            <h5 class="card-title">Sortie Randonnée – Circuit des Landes</h5>
+            <p class="card-text">Une balade accessible à tous autour de la nature chapelaine. <br><strong>Dimanche 23 juin – 9h30</strong></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="card text-center mx-auto" style="max-width: 500px;">
+          <div class="card-body">
+            <h5 class="card-title">Fête des confitures</h5>
+            <p class="card-text">Animations, dégustations et échanges sucrés à la salle communale. <br><strong>Samedi 6 juillet – dès 10h</strong></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contrôles de navigation -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvenements" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Précédent</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselEvenements" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Suivant</span>
+    </button>
+  </div>
+</div>
+
+    <!-- Horaires -->
+    <section class="mt-5 horaires-ouverture">
+      <h2 class="h4 mb-3">Horaires d'ouverture</h2>
+      <ul class="list-unstyled">
+        <li><strong>Lundi – mardi – mercredi – vendredi :</strong> 8h30 – 12h15 | 13h30 – 17h</li>
+        <li><strong>Jeudi :</strong> 13h30 – 17h</li>
+        <li><strong>Samedi :</strong> 9h – 12h</li>
+      </ul>
+    </section>
+  </section>
+</main>
+
+<section class="da-section container my-5 p-4 bg-light rounded shadow">
+  <h2 class="text-primary mb-4">Direction Artistique</h2>
+
+  <p class="lead">
+    Dans le cadre de la conception du site web de La Cordée, la direction artistique a fait les choix suivants :
+  </p>
+
+  <ul class="list-unstyled ms-3">
+    <li class="mb-3">
+      <strong>Typographie</strong><br>
+      <embed src="assets/pdf/Chartre graphique - Dossier PDF/Typos/Typos.pdf" type="application/pdf" width="100%" height="300px" class="rounded border" />
+    </li>
+    <li class="mb-3">
+      <strong>Charte graphique</strong><br>
+      <embed src="assets/pdf/Chartre graphique - Dossier PDF/Couleurs/couleurs.pdf" type="application/pdf" width="100%" height="300px" class="rounded border" />
+    </li>
+    <li>
+      <strong>Objets promotionnels</strong><br>
+      Afin de renforcer l’image de marque de l’association, une gamme d’objets visuels a été proposée.
+    </li>
+  </ul>
+
+  <div id="carrouselle-container" class="mt-4">
+    <!-- Le carrousel sera chargé ici -->
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('carrouselle.html')
+        .then(response => response.text())
+        .then(html => {
+          document.getElementById('carrouselle-container').innerHTML = html;
+        })
+        .catch(err => {
+          console.error('Erreur chargement carrousel:', err);
+        });
+    });
+  </script>
+</section>
+
+<section class="thank-you-section text-center my-5 py-4 bg-primary bg-opacity-10 rounded">
+  <p class="mb-3 fs-5">Merci de soutenir La Cordée&nbsp;! 😊<br>Retrouvez tous nos événements ici :</p>
+  <a href="calendrier.html" class="btn btn-primary">Voir les événements</a>
+</section>
+
+<footer id="site-footer" class="text-center py-4 border-top">
+  <div class="header-container">
+    <p class="mb-2">&copy; 2025 La Cordée - Tous droits réservés</p>
+    <div class="social-icons" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+      <div class="social-icons" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+      <a href="https://www.instagram.com/lachapelledesfougeretz/" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/insta.png" alt="Instagram" style="height: 24px; width: 24px;">
+      </a>
+      <a href="https://www.facebook.com/toncompte" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/facebook.png" alt="Facebook" style="height: 24px; width: 24px;">
+      </a>
+      <a href="mailto:contact@lacordee.fr" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/email.png" alt="Email" style="height: 24px; width: 24px;">
+      </a>
+      <a href="https://twitter.com/toncompte" target="_blank" rel="noopener noreferrer">
+        <img src="assets/img/x.png" alt="X (anciennement Twitter)" style="height: 24px; width: 24px;">
+      </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/genererCartesActivites.js"></script>
+<script src="assets/js/buttonTheme.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Événements - La Cordée</title>
+  <link id="favicon" rel="shortcut icon"
+      href="assets/img/Chartre%20graphique%20-%20Dossier%20PNG/Icônes/Icône%20bleu.png"
+      type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+<header class="bg-primary text-white p-3 mb-4">
+  <div class="container d-flex align-items-center justify-content-between">
+    <a href="index.html" class="d-flex align-items-center text-white text-decoration-none fs-3 fw-bold">
+      <img id="main-logo" class="logo-reduit"
+          src="assets/img/Chartre graphique - Dossier PNG/Logos/Logo bleu sur fond rose.png"
+          alt="Logo La Cordée" />
+      <span class="ms-2">Evénements</span>
+    </a>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item"><a href="index.html" class="nav-link text-white">Accueil</a></li>
+        <li class="nav-item"><a href="calendrier.html" class="nav-link text-white">Événements</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="main-container mb-5">
+  <h1 class="mb-4">Calendrier des événements</h1>
+  <section id="calendar-section">
+    <div id="calendar"></div>
+</main>
+
+<footer class="bg-light text-center py-4 border-top">
+  <div class="container">
+    <p class="mb-0">&copy; 2025 La Cordée - Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="assets/js/calendar.js"></script>
+<script src="assets/js/buttonTheme.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script pour charger le favicon selon le thème -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const favicon = document.getElementById("favicon");
+    const savedTheme = localStorage.getItem("selectedTheme");
+
+    const faviconPaths = {
+      "bleu-rose": "assets/img/Chartre graphique - Dossier PNG/Icônes/Icône bleu.png",
+      "bleu-vert": "assets/img/Chartre graphique - Dossier PNG/Icônes/Icône vert.png",
+      "jaune-bleu": "assets/img/Chartre graphique - Dossier PNG/Icônes/Icône jaune.png",
+      "rose-bleu": "assets/img/Chartre graphique - Dossier PNG/Icônes/Icône rose.png",
+      "vert-bleu": "assets/img/Chartre graphique - Dossier PNG/Icônes/Icône vert.png"
+    };
+
+    if (favicon && faviconPaths[savedTheme]) {
+      favicon.href = faviconPaths[savedTheme];
+    }
+  });
+</script>
+</body>
+</html>
