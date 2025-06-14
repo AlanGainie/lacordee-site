@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Événements - La Cordée</title>
   <link id="favicon" rel="shortcut icon"
-      href="assets/img/Chartre%20graphique%20-%20Dossier%20PNG/Icônes/Icône%20bleu.png"
-      type="image/x-icon">
+        href="assets/img/Chartre%20graphique%20-%20Dossier%20PNG/Icônes/Icône%20bleu.png"
+        type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="assets/css/style.css" rel="stylesheet" />
 </head>
@@ -16,9 +16,9 @@
   <div class="container d-flex align-items-center justify-content-between">
     <a href="index.html" class="d-flex align-items-center text-white text-decoration-none fs-3 fw-bold">
       <img id="main-logo" class="logo-reduit"
-          src="assets/img/Chartre graphique - Dossier PNG/Logos/Logo bleu sur fond rose.png"
-          alt="Logo La Cordée" />
-      <span class="ms-2">Evénements</span>
+           src="assets/img/Chartre graphique - Dossier PNG/Logos/Logo bleu sur fond rose.png"
+           alt="Logo La Cordée" />
+      <span class="ms-2">Événements</span>
     </a>
     <nav>
       <ul class="nav">
@@ -29,10 +29,43 @@
   </div>
 </header>
 
-<main class="main-container mb-5">
+<main class="main-container container mb-5">
   <h1 class="mb-4">Calendrier des événements</h1>
-  <section id="calendar-section">
+
+  <!-- Section calendrier principal (peut contenir un vrai calendrier si tu l'ajoutes ensuite) -->
+  <section id="calendar-section" class="mb-5">
     <div id="calendar"></div>
+  </section>
+
+  <!-- 🧩 Section Événements en bandes horizontales -->
+<section id="evenements-bandes">
+
+  <div class="evenement-bande bg-light text-dark py-4 px-3">
+    <div class="container">
+      <h3>🎵 Atelier Mandala Sonore</h3>
+      <p><strong>Vendredi 14 juin – 14h à 16h</strong></p>
+      <p>Rejoignez-nous pour un moment de détente et de créativité autour du son et des formes.</p>
+    </div>
+  </div>
+
+  <div class="evenement-bande bg-warning bg-opacity-25 text-dark py-4 px-3">
+    <div class="container">
+      <h3>🥾 Sortie Randonnée – Circuit des Landes</h3>
+      <p><strong>Dimanche 23 juin – 9h30</strong></p>
+      <p>Une balade accessible à tous autour de la nature chapelaine.</p>
+    </div>
+  </div>
+
+  <div class="evenement-bande bg-success bg-opacity-25 text-dark py-4 px-3">
+    <div class="container">
+      <h3>🍓 Fête des confitures</h3>
+      <p><strong>Samedi 6 juillet – dès 10h</strong></p>
+      <p>Animations, dégustations et échanges sucrés à la salle communale.</p>
+    </div>
+  </div>
+
+</section>
+
 </main>
 
 <footer class="bg-light text-center py-4 border-top">
@@ -64,5 +97,6 @@
     }
   });
 </script>
+
 </body>
 </html>

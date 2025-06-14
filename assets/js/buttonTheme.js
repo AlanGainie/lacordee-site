@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeSelector = document.getElementById('themeSelector');
     const mainLogo = document.getElementById('main-logo');
     const favicon = document.getElementById('favicon');
-    const footer = document.getElementById('site-footer');
-    const header = document.getElementById('site-header');
+    const footer = document.getElementById('site-footer') || document.querySelector('footer');
+    const header = document.getElementById('site-header') || document.querySelector('header');
 
     const logoPaths = {
         'bleu-rose': 'assets/img/Chartre graphique - Dossier PNG/Logos/Logo bleu sur fond rose.png',
@@ -21,15 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'vert-bleu': 'assets/img/Chartre graphique - Dossier PNG/Icônes/Icône vert.png'
     };
 
-    // Couleurs de fond complémentaires pour le header selon le thème
-    const headerBackgroundColors = {
-        'bleu-rose': '#FFD700',     // jaune
-        'bleu-vert': '#FF00FF',     // magenta
-        'jaune-bleu': '#00008B',    // bleu foncé
-        'rose-bleu': '#00FF00',     // vert
-        'vert-bleu': '#FF00FF'      // magenta
-    };
-
     function applyTheme(theme) {
         if (!theme) return;
 
@@ -43,20 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
             favicon.href = faviconPaths[theme];
         }
 
-        // Footer classe
+        // Footer
         if (footer) {
-            footer.className = 'text-center py-4 border-top'; // reset
+            footer.className = 'text-center py-4 border-top'; // reset de base
             footer.classList.add(`footer-${theme}`);
         }
 
-        // Header classe et fond dynamique
+        // Header
         if (header) {
-            header.className = 'text-white p-3 mb-4'; // reset classes
+            header.className = 'text-white p-3 mb-4'; // reset de base
             header.classList.add(`header-${theme}`);
-
-            // Appliquer couleur de fond selon le thème
-            const bgColor = headerBackgroundColors[theme];
-            header.style.backgroundColor = bgColor || '#333'; // fallback
         }
 
         // Sauvegarde
@@ -65,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loadTheme() {
         const savedTheme = localStorage.getItem('selectedTheme');
-        if (savedTheme && logoPaths[savedTheme]) {
+        const defaultTheme = themeSelector ? themeSelector.value : 'bleu-rose';
+        applyTheme(savedTheme || defaultTheme);
+
+        // Mettre à jour le sélecteur s’il existe
+        if (themeSelector && savedTheme) {
             themeSelector.value = savedTheme;
-            applyTheme(savedTheme);
-        } else {
-            const defaultTheme = themeSelector ? themeSelector.value : 'bleu-rose';
-            applyTheme(defaultTheme);
         }
     }
 

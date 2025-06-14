@@ -291,61 +291,62 @@ h6 {
 }
 
 .footer-vert-bleu {
-  background-color: #CDDFB0;
-  color: #1F2554;
-  /* texte foncé sur fond clair */
+  background-color: #C9DFAB;
 }
 
 .footer-jaune-bleu {
   background-color: #FFED70;
-  color: #1F2554;
 }
 
 .footer-rose-bleu {
   background-color: #E46498;
-  color: white;
 }
 
 .footer-bleu-rose {
   background-color: #1F2554;
-  color: white;
 }
 
 .footer-bleu-vert {
   background-color: #8BD3E1;
-  /* valeur approchée, adapte si besoin */
-  color: #1F2554;
 }
 
 .header-bleu-rose {
   background-color: #1F2554;
-  /* bleu foncé */
 }
 
 .header-bleu-vert {
   background-color: #8BD3E1;
-  /* magenta */
 }
 
 .header-jaune-bleu {
   background-color: #FFED70;
-  /* jaune */
-  color: #1F2554;
 }
 
 .header-rose-bleu {
   background-color: #E46498;
-  /* jaune */
-  color: #1F2554;
 }
 
 .header-vert-bleu {
-  background-color: #CDDFB0;
-  /* magenta */
+  background-color: #C9DFAB;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1);
   /* inverse la couleur blanche par du noir */
+}
+
+.evenement-bande {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  transition: all 0.4s ease;
+  opacity: 1;
+}
+
+.evenement-bande:hover {
+  opacity: 0.95;
+  transform: scale(1.01);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
