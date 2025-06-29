@@ -116,6 +116,25 @@
   </div>
 </div>
 
+<script src="events.js"></script>
+  <script>
+    const carouselInner = document.getElementById('carousel-inner');
+
+    evenements.forEach((event, index) => {
+      const isActive = index === 0 ? 'active' : '';
+      carouselInner.innerHTML += `
+        <div class="carousel-item ${isActive}">
+          <div class="${event.styleCarrousel}" style="max-width: ${event.maxWidth};">
+            <div class="card-body">
+              <h5 class="card-title">${event.titre}</h5>
+              <p class="card-text">${event.description} <br><strong>${event.date}</strong></p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+
     <!-- Horaires -->
     <section class="mt-5 horaires-ouverture">
       <h2 class="h4 mb-3">Horaires d'ouverture</h2>

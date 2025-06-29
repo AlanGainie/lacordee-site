@@ -38,7 +38,23 @@
   </section>
 
   <!-- 🧩 Section Événements en bandes horizontales -->
-<section id="evenements-bandes">
+<section id="evenements-bandes"></section>
+  <script src="events.js"></script>
+  <script>
+    const sectionBandes = document.getElementById('evenements-bandes');
+
+    evenements.forEach(event => {
+      sectionBandes.innerHTML += `
+        <div class="evenement-bande ${event.styleBande} py-4 px-3">
+          <div class="container">
+            <h3>${event.emoji} ${event.titre}</h3>
+            <p><strong>${event.date}</strong></p>
+            <p>${event.description}</p>
+          </div>
+        </div>
+      `;
+    });
+  </script>
 
   <div class="evenement-bande bg-light text-dark py-4 px-3">
     <div class="container">
@@ -63,7 +79,6 @@
       <p>Animations, dégustations et échanges sucrés à la salle communale.</p>
     </div>
   </div>
-
 </section>
 
 </main>
